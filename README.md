@@ -32,6 +32,10 @@ path/to/Editor/Unity -batchmode -nographics -silent-crashes -quit
 -projectPath /path/to/simulator/source/code 
 -logFile log.txt
 ```
+## Modifications to the simulator 
+### Micromobility vehicles added
+![](docs/images/all_vehicles_labeled.png)
+
 
 ## Contributors
 * **Deepak Talwar** - (https://github.com/deepaktalwardt)
