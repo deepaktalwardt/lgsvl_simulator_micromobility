@@ -8,14 +8,14 @@ This project was originally forked from [lgsvl/simulator](https://github.com/lgs
 Due to size limitations of Git LFS, entire Unity project could not be hosted on GitHub. **It is instead uploaded to Dropbox and can be downloaded [here](https://www.dropbox.com/sh/wikrmv8u0vke4q5/AACPimgZrVvaqfOuVaycP5nXa?dl=0).**
 
 ### Release binaries
-Releases are only available for Linux. You can build your own windows or linux binaries using the instructions below. Please close the Unity Editor while building as build cannot be completed with the editor open. You can build for Linux from Windows if you installed Linux build target while installing Unity.
+Releases are only available for Linux. You can build your own windows or linux binaries using the instructions below. 
 #### Linux
 1. **With Autoware Ego-car and many micromobility vehicles**: Supports rendering of object detections directly from Autoware. [Download](https://www.dropbox.com/sh/dku35yl7mhflmad/AAC7_f9wZRx-ELVIMD7I0s0La?dl=0)
 2. **With Apollo Ego-car and manually controlled e-scooter**: Only contains a single scooter that can be manually controlled using IJKL keys on the keyboard. [Download](https://www.dropbox.com/sh/gyxhgcqgmd4jmqm/AABXR6ysNd1ZiCp9RE7wtZyDa?dl=0)
 3. **With Apollo Ego-car and many micromobility vehicles**: Perfect for data collection. [Download](https://www.dropbox.com/sh/zfe5hda944anzuz/AACDk17giYY0DVtrx-zzjiOca?dl=0)
 
 #### To build your own binaries
-Please note that the first build can take upwards of 45 minutes to build. Subsequent builds will be much faster.
+Please note that the first build can take upwards of 45 minutes to build. Subsequent builds will be much faster. Please close the Unity Editor while building as build cannot be completed with the editor open. You can build for Linux from Windows if you installed Linux build target while installing Unity.
 ##### Windows
 ```
 C:\path\to\Unity\Editor\Unity.exe -batchmode -nographics -silent-crashes -quit 
