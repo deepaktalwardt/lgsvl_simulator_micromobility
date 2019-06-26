@@ -36,6 +36,27 @@ path/to/Editor/Unity -batchmode -nographics -silent-crashes -quit
 ### Micromobility vehicles added
 ![](docs/images/all_vehicles_labeled.png)
 
+### Process for adding these vehicles
+
+### Modifications to ego-car
+
+## Projects with modified simulator
+
+### Detection of Micromobility vehicles from camera images
+#### YOLOv3 Repository trained on dataset collected from this simulator
+#### ROS Packages
+
+### Testing how Baidu Apollo works with modified simulator
+
+### 3D Detection of Micromobility vehicles from LiDAR Pointclouds using YOLO3D (coming soon)
+
+## Links
+### Project report
+### Project presentation
+
+## Acknowledgements
+We would like to thank Martins Mozeiko and Brian Shin from LGSVL lab for supporting us and providing technical help throughout this project.
+
 
 ## Contributors
 * **Deepak Talwar** - (https://github.com/deepaktalwardt)
