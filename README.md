@@ -3,9 +3,9 @@ Modified version of LGSVL Automotive Simulator with added models of micromobilit
 
 This project was originally forked from [lgsvl/simulator](https://github.com/lgsvl/simulator) and is based on their April 2019 release.
 
-## [Download](https://www.dropbox.com/sh/wikrmv8u0vke4q5/AACPimgZrVvaqfOuVaycP5nXa?dl=0)
+## [Download](https://www.dropbox.com/sh/eyyehodzsu09v31/AACRm2BwvPeow7dk2mn93Zxia?dl=0)
 ### To open simulator in Unity Editor
-Due to size limitations of Git LFS, entire Unity project could not be hosted on GitHub. **It is instead uploaded to Dropbox and can be downloaded [here](https://www.dropbox.com/sh/wikrmv8u0vke4q5/AACPimgZrVvaqfOuVaycP5nXa?dl=0).**
+Due to size limitations of Git LFS, entire Unity project could not be hosted on GitHub. **It is instead uploaded to Dropbox and can be downloaded [here](https://www.dropbox.com/sh/eyyehodzsu09v31/AACRm2BwvPeow7dk2mn93Zxia?dl=0).**
 
 ### Release binaries
 Releases are only available for Linux. You can build your own windows or linux binaries using the instructions below. 
