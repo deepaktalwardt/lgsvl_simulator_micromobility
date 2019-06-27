@@ -62,7 +62,7 @@ Please follow these steps if you would like to add your own vehicles.
 
 ## Links
 ### Project report
-### Project presentation
+### [Project presentation](https://docs.google.com/presentation/d/1NzCOh9w1M_gmNOr4F7BRGH3UlDinqTB6wfFwwc2YfJY/edit?usp=sharing)
 
 ## Acknowledgements
 We would like to thank Martins Mozeiko and Brian Shin from LGSVL lab for supporting us and providing technical help throughout this project.
