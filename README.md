@@ -34,9 +34,19 @@ path/to/Editor/Unity -batchmode -nographics -silent-crashes -quit
 ```
 ## Modifications to the simulator 
 ### Micromobility vehicles added
+We added the following micromobility vehicles to the original simulator.
 ![](docs/images/all_vehicles_labeled.png)
 
-### Process for adding these vehicles
+### Process for adding micromobility vehicles
+![](docs/images/process_adding_vehicles.jpg)
+1. Solid modeling of the vehicle in a CAD software.
+2. Solid model is then saved as a mesh in .STL format.
+3. Import mesh into Blender and add materials to the model. Here the Origin is translated to Center of Gravity of the model and the axis are rotated to match defaults followed by Unity. Not doing this can lead to a lot of headache in manipulating the vehicle in Unity later.
+4. This model is then saved in .FBX format and imported into a Unity test scene as a `GameObject`. The model is scaled to correct dimensions, if necessary.
+5. Add `RigidBody` component to the model and add a realistic mass value. Humanoid used here is downloaded from the Unity Asset Store [here](https://assetstore.unity.com/packages/3d/characters/humanoids/rcp-caucaisan-character-models-81402#). Initially, the humanoid is configured in a T-orientation. Limbs and joints need to be manipulated to appropriate positions.
+6. A `BoxCollider` is added to the `GameObject` and its boundaries are scaled to fit the entire model. It is then saved as a prefab and imported into the San Francisco Scene.
+
+Please follow these steps if you would like to add your own vehicles.
 
 ### Modifications to ego-car
 
