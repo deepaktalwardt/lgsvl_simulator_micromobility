@@ -87,15 +87,16 @@ With the Simulator and model inference running on the same GPU, we were able to 
 [![2D Perception of Micro-mobility Vehicles on LGSVL Simulator | CMPE 297 Spring 2019](docs/images/video1.jpg)](https://www.youtube.com/watch?v=DwWY89dVGEw)
 
 ##### Video - Displaying detections directly into the simulator
+To publish detections directly to the simulator, use the Autoware ego-car.
 [![LGSVL Simulator 2D Perception Bounding Boxes | CMPE 297 Spring 2019](docs/images/video2.jpg)](https://www.youtube.com/watch?v=72CPQL3bGWQ&t)
 
 ### 2. Testing how Baidu Apollo works with modified simulator
-[![Apollo vehicle interacting with e-scooter | CMPE 297 Spring 2019](docs/images/video3.jpg)](https://www.youtube.com/watch?v=TVreirGAxmI)
+[![Apollo vehicle interacting with e-scooter | CMPE 297 Spring 2019](docs/images/video3.jpg)](https://youtu.be/TVreirGAxmI?t=92)
 
 ### 3. 3D Detection of Micromobility vehicles from LiDAR Pointclouds using YOLO3D (coming soon)
 
 ## Links
-### Project report
+### [Project report](docs/project_report.pdf)
 ### [Project presentation](https://docs.google.com/presentation/d/1NzCOh9w1M_gmNOr4F7BRGH3UlDinqTB6wfFwwc2YfJY/edit?usp=sharing)
 
 ## Acknowledgements
