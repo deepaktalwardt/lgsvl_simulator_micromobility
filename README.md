@@ -68,20 +68,31 @@ Currently, only controlling e-scooters is supported. To enable controlling an e-
 
 ## Projects with modified simulator
 
-### Detection of Micromobility vehicles from camera images
+### 1. Detection of Micromobility vehicles from camera images
 ROS packages developed for this project are available on this [repository](https://github.com/deepaktalwardt/lgsvl_micromobility_ros_pkgs).
 
 #### Dataset collection
-`lgsvl_data_collector` ROS package available [here](https://github.com/deepaktalwardt/lgsvl_micromobility_ros_pkgs) is developed to collect data from this simulator. This package collects main camera images, depth camera images, LiDAR point clouds and Micromobility 2D and 3D Ground Truth annotations.
+`lgsvl_data_collector` ROS package available [here](https://github.com/deepaktalwardt/lgsvl_micromobility_ros_pkgs) is developed to collect data from this simulator. This package collects main camera images, depth camera images, LiDAR point clouds and Micromobility 2D and 3D Ground Truth annotations. We have provided the datasets we collected below.
+* [Dataset 1](https://www.dropbox.com/s/9cvsmraio6q6v0d/large_dataset_1.zip?dl=0)
+* [Dataset 2](https://www.dropbox.com/s/kt6hwfsa95v4hck/large_dataset_2.zip?dl=0)
 
-#### YOLOv3 Repository trained on dataset collected from this simulator
+#### [YOLOv3 Repository trained on dataset collected from this simulator](https://github.com/deepaktalwardt/keras-yolo3)
+This repository shows how we trained YOLOv3 Object Detection algorithm on the dataset we collected from the modified simulator. Please follow the instructions on the repository if you would like to perform your own training on your own datasets. 
+
+Hyperparameters chosen for training are provdided in detail in the project presentation [here](https://docs.google.com/presentation/d/1NzCOh9w1M_gmNOr4F7BRGH3UlDinqTB6wfFwwc2YfJY/edit#slide=id.g573837cf9f_3_91)
+
 #### Real-time inference
-##### Displaying detections in a separate window
-##### Displaying detections directly into the simulator
+With the Simulator and model inference running on the same GPU, we were able to achieve ~18 FPS performance. We provide two methods of visualizing inference results on camera images captured in realtime from the simulator. Please use `lgsvl_mm_perception` ROS package from the above mentioned [repository](https://github.com/deepaktalwardt/lgsvl_micromobility_ros_pkgs) to run inference. 
+##### Video - Displaying detections in a separate window
+[![2D Perception of Micro-mobility Vehicles on LGSVL Simulator | CMPE 297 Spring 2019](docs/images/video1.jpg)](https://www.youtube.com/watch?v=DwWY89dVGEw)
 
-### Testing how Baidu Apollo works with modified simulator
+##### Video - Displaying detections directly into the simulator
+[![LGSVL Simulator 2D Perception Bounding Boxes | CMPE 297 Spring 2019](docs/images/video2.jpg)](https://www.youtube.com/watch?v=72CPQL3bGWQ&t)
 
-### 3D Detection of Micromobility vehicles from LiDAR Pointclouds using YOLO3D (coming soon)
+### 2. Testing how Baidu Apollo works with modified simulator
+[![Apollo vehicle interacting with e-scooter | CMPE 297 Spring 2019](docs/images/video3.jpg)](https://www.youtube.com/watch?v=TVreirGAxmI)
+
+### 3. 3D Detection of Micromobility vehicles from LiDAR Pointclouds using YOLO3D (coming soon)
 
 ## Links
 ### Project report
@@ -89,7 +100,6 @@ ROS packages developed for this project are available on this [repository](https
 
 ## Acknowledgements
 We would like to thank Martins Mozeiko and Brian Shin from LGSVL lab for supporting us and providing technical help throughout this project.
-
 
 ## Contributors
 * **Deepak Talwar** - (https://github.com/deepaktalwardt)
