@@ -52,7 +52,13 @@ Please follow these steps if you would like to add your own vehicles.
 ### Modifications to ego-car
 LGSVL simulator provides separate ego-cars configured with sensor suites to work with Apollo and Autoware self-driving stacks respectively. At this stage, the sensors on these ego-cars cannot "see" the new vehicles we added. More modifications need to be made in order for these vehicles to be perceived by ego-cars as NPCs (Non-playable characters).
 
-1. **Adding Ground Truth Sensors for micromobility vehicles:** In order to detect ground truths for micro-mobility vehicles, we added two additional sensors to the ego-car – `MMGroundTruth2D` and `MMGroundTruth3D` – for 2D and 3D ground truth bounding boxes respectively. These sensors are similar to the existing ground truth sensors except that they only output boxes for micro-mobility vehicles’ layers. Bounding box colors are defined in this sensor and toggle switches to turn these sensors on or off are also added.
+1. **Adding Ground Truth Sensors for micromobility vehicles:** In order to detect ground truths for micro-mobility vehicles, we added two additional sensors to the ego-car – `MMGroundTruth2D` and `MMGroundTruth3D` – for 2D and 3D ground truth bounding boxes respectively. These sensors are similar to the existing ground truth sensors except that they only output boxes for micro-mobility vehicles’ layers. Bounding box colors are defined in this sensor and toggle switches to turn these sensors on or off are also added. These sensors publish to the following topics:
+* `MMGroundTruth2D`
+  * Topic: `/simulator/ground truth/mm_2d_detections`
+  * Message type: `Detection2DArray`
+* `MMGroundTruth3D`
+  * Topic: `/simulator/ground truth/mm_3d_detections`
+  * Message type: `Detection3DArray`
 2. **Modifying Culling Masks:** Users can selectively choose the layers that perception sensors in the car, such as cameras, LiDAR and depth sensors, can ”see” by choosing them the `CullingMask` selector. By default, the newly added layers for micromobility vehicles are not added to the `CullingMask`. Therefore, the new vehicles need to be selected in the `CullingMask` selector for the sensors to render them.
 3. **Modifications to Perception sensors:** The number of channels in the LiDAR sensor were changed from 16 (default) to 64. In addition, motion blur was removed from the `DriverCamera GameObject` as it resulted in blurry images at lower frame rates.
 4. **Modifications to `NeedsBridge` list:** The `NeedsBridge` list contains references to all components that are only instantiated when a ROSBridge server is active and the simulator is connected as a client. This is done so that the simulator does not waste resources and publish messages to topics if no nodes are subscribing to them over ROSBridge. By default, `MMGroundTruth2D`, `MMGroundTruth3D` and the depth camera are not added to `NeedsBridge` list. The script components of these sensors are added to `NeedsBridge` list in order to send messages over ROSBridge.
@@ -63,8 +69,15 @@ Currently, only controlling e-scooters is supported. To enable controlling an e-
 ## Projects with modified simulator
 
 ### Detection of Micromobility vehicles from camera images
+ROS packages developed for this project are available on this [repository](https://github.com/deepaktalwardt/lgsvl_micromobility_ros_pkgs).
+
+#### Dataset collection
+`lgsvl_data_collector` ROS package available [here](https://github.com/deepaktalwardt/lgsvl_micromobility_ros_pkgs) is developed to collect data from this simulator. This package collects main camera images, depth camera images, LiDAR point clouds and Micromobility 2D and 3D Ground Truth annotations.
+
 #### YOLOv3 Repository trained on dataset collected from this simulator
-#### ROS Packages
+#### Real-time inference
+##### Displaying detections in a separate window
+##### Displaying detections directly into the simulator
 
 ### Testing how Baidu Apollo works with modified simulator
 
