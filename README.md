@@ -49,6 +49,16 @@ We added the following micromobility vehicles to the original simulator.
 Please follow these steps if you would like to add your own vehicles.
 
 ### Modifications to ego-car
+LGSVL simulator provides separate ego-cars configured with sensor suites to work with Apollo and Autoware self-driving stacks respectively. At this stage, the sensors on these ego-cars cannot "see" the new vehicles we added. More modifications need to be made in order for these vehicles to be perceived by ego-cars as NPCs (Non-playable characters).
+#### Apollo ego-car
+1. Adding Ground Truth Sensors for micromobility vehicles
+2. Modifying Culling Masks
+3. Modifications to Perception sensors
+4. Modifications to `NeedsBridge` list
+#### Autoware ego-car
+
+### Manually controlling micromobility vehicles
+Currently, only controlling e-scooters is supported. To enable controlling an e-scooter, select the `GameObject` and check its Script component. You will then be able to control it with IJKL keys.
 
 ## Projects with modified simulator
 
