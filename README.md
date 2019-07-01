@@ -66,7 +66,7 @@ LGSVL simulator provides separate ego-cars configured with sensor suites to work
 4. **Modifications to `NeedsBridge` list:** The `NeedsBridge` list contains references to all components that are only instantiated when a ROSBridge server is active and the simulator is connected as a client. This is done so that the simulator does not waste resources and publish messages to topics if no nodes are subscribing to them over ROSBridge. By default, `MMGroundTruth2D`, `MMGroundTruth3D` and the depth camera are not added to `NeedsBridge` list. The script components of these sensors are added to `NeedsBridge` list in order to send messages over ROSBridge.
 
 ### Manually controlling micromobility vehicles
-Currently, only controlling e-scooters is supported. To enable controlling an e-scooter, select the `GameObject` and check its Script component. You will then be able to control it with IJKL keys.
+Currently, only controlling e-scooters is supported. To enable controlling an e-scooter, select the `GameObject` and check its Script component. You will then be able to control it with WASD keys.
 
 ## Projects with modified simulator
 
